@@ -9,6 +9,19 @@ class TopController extends Controller
 {
     public function add()
     {
-        return view('admin.top.create');
+        return view('admin.create.top');
     }
+    public function create(Request $requeest)
+    {
+        return redirect('admin/create/top');
+    }
+    public function add2()
+    {
+        return view('admin.create.inquiry');
+    }
+    public function create2(Request $requeest)
+    {
+        return redirect('admin/create/inquiry');
+    }
+
 }

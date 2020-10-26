@@ -15,5 +15,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::group(['prefix' => 'admin'], function() {
-    Route::get('top/create', 'Admin\TopController@add');
+    Route::get('create/top', 'Admin\TopController@add');
+    Route::post('create/top','Admin\TopController@create');
+    Route::get('create/inquiry', 'Admin\TopController@add2');
+    Route::post('create/inquiry','Admin\TopController@create2');
 });
