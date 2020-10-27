@@ -1,5 +1,7 @@
 @extends('layouts.admin')
-@section('title','お問合せの作成')
+@section('title','お問合せフォーム')
+@include('layouts.header')
+@include('layouts.navbar')
 @section('content')
 <div class="container">
     <div class="row">
