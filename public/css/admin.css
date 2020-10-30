@@ -11,19 +11,15 @@ body {
   left: 0px;
   margin: 0;
   padding: 0;
-  font-size: 77%;
+  font-size: 50%;
   text-align: left;
-}
-
-.headerAddress {
-  float: right;
 }
 
 .tel {
   margin: 0;
   padding: 0 0 0 25px;
   text-align: right;
-  font-size: 200%;
+  font-size: 80%;
 }
 
 .time {
@@ -34,14 +30,27 @@ body {
   position: absolute;
   bottom: 0;
   wight: 220px;
-  font-size: 80%;
+  text-align: right;
+  font-size: 70%;
 }
 
 .email {
   margin: 0;
   padding: 0 0 0 25px;
   text-align: right;
-  font-size: 200%;
+  font-size: 80%;
+}
+
+.web {
+  border: solid 1px #808080;
+  padding: 5px 0;
+  text-align: center;
+  margin: 0;
+  position: absolute;
+  bottom: 0;
+  wight: 220px;
+  text-align: right;
+  font-size: 70%;
 }
 
 .navbar-laravel {
