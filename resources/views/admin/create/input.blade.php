@@ -18,35 +18,42 @@
                 </ul>
                 @endif
                 <div class="form-group row">
-                    <label class="col-md-2">お問合せ内容</label><br>
+                    <label class="col-md-2" for="contents">お問合せ内容</label><br>
                     <span class="must">必須</span><br>
                     <div class="col-md-10">
                         <textarea class="form-control" name="contents" rows="20">{{ old('contents') }}</textarea>
                     </div>
                 </div>
                 <div class="form-group row">
-                    <label class="col-md-2">お名前</label>
+                    <label class="col-md-2" for="name">お名前</label>
                     <span class="must">必須</span>
-                    
                     <div class="col-md-10">
                         <input type="text" class="form-control" name="name" value="{{ old('name') }}">
                     </div>
                 </div>
                 <div class="form-group row">
-                    <label class="col-md-2">電話番号</label>
+                    <label class="col-md-2" for="tel">電話番号</label>
                     <span class="must">必須</span>
                     <div class="col-md-10">
                         <input type="tel" class="form-control" name="tel" value="{{ old('tel') }}">
                     </div>
                 </div>
                 <div class="form-group row">
-                    <label class="col-md-2">メールアドレス</label>
+                    <label class="col-md-2" for="email">メールアドレス</label>
                     <span class="must">必須</span>
                     <div class="col-md-10">
                         <input type="email" class="form-control" name="email" value="{{ old('email') }}">
                     </div>
                 </div>
-                {{ csrf_field() }}
+                <div class="form-group row">
+                    <h3>個人情報保護方針</h3>
+                    <p>当サイトは、お客様の個人情報について、お客様の承諾が無い限り第三者に開示、提供を一切いたしません。
+                        <br>お客様から個人情報をご提供していただき、お客様へのサービスにご利用させていただくことがあります。
+                        <br>その目的以外には利用いたしません。
+                        <br>そして、ご提供いただいた個人情報を取り扱うにあたり管理責任者を置き、適切な管理を行っております。
+                    </p>
+                </div>
+                    {{ csrf_field() }}
                 <input type="submit" class="btn btn-primary" value="確認画面へ">
             </form>
         </div>

@@ -4,10 +4,11 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Confirm;
 
 class TopController extends Controller
 {
-    public function add()
+    public function app()
     {
         return view('admin.create.top');
     }
@@ -15,13 +16,36 @@ class TopController extends Controller
     {
         return redirect('admin/create/top');
     }
-    public function add2()
+
+    /**
+     * お問合せフォーム画面
+     * 
+     * Undocumented function
+     *
+     * @return void
+     */
+    public function input()
     {
-        return view('admin.create.inquiry');
+        return view('admin.create.input');
     }
-    public function create2(Request $requeest)
+
+
+    /**
+     * お問合せデータをDBに登録
+     * Undocumented function
+     *
+     * @param Request $requeest
+     * @return void
+     */
+    public function confirm(Request $requeest)
     {
-        return redirect('admin/create/inquiry');
+        $this->validate($request, Confirm::$rules);
+        $form = $request->all();
+        
+
+        // DBに値を保存する
+        // Confirm::create();
+        return redirect('admin/create/input');
     }
 
 }

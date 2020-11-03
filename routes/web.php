@@ -14,9 +14,9 @@
 Route::get('/', function () {
     return view('welcome');
 });
-Route::group(['prefix' => 'admin'], function() {
-    Route::get('create/top', 'Admin\TopController@add');
+Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
+    Route::get('create/top', 'Admin\TopController@app');
     Route::post('create/top','Admin\TopController@create');
-    Route::get('create/inquiry', 'Admin\TopController@add2');
-    Route::post('create/inquiry','Admin\TopController@create2');
+    Route::get('create/input', 'Admin\TopController@input');
+    Route::post('create/input','Admin\TopController@confirm');
 });
