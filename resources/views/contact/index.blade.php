@@ -9,7 +9,8 @@
             <br>内容に同意していただけましたら、下記フォームに必要事項をご入力の上、「入力確認画面へ」ボタンをクリックしてください。
             <br>なお、お問い合わせの内容によっては、ご返答が遅れる場合がございます。ご了承ください。
             </p>
-            <form action="{{ action('Admin\TopController@create') }}" method="post"enctype="multipart/form-data">
+            <form method="POST" action="{{ route('contact.confirm') }}">
+                @csrf
                 @if (count($errors) > 0)
                 <ul>
                     @foreach($errors->all() as $e)
@@ -19,28 +20,28 @@
                 @endif
                 <div class="form-group row">
                     <label class="col-md-2" for="contents">お問合せ内容</label><br>
-                    <span class="must">必須</span><br>
+                    <span class="badge badge-danger ml-1">必須</span><br>
                     <div class="col-md-10">
                         <textarea class="form-control" name="contents" rows="20">{{ old('contents') }}</textarea>
                     </div>
                 </div>
                 <div class="form-group row">
                     <label class="col-md-2" for="name">お名前</label>
-                    <span class="must">必須</span>
+                    <span class="badge badge-danger ml-1">必須</span>
                     <div class="col-md-10">
                         <input type="text" class="form-control" name="name" value="{{ old('name') }}">
                     </div>
                 </div>
                 <div class="form-group row">
                     <label class="col-md-2" for="tel">電話番号</label>
-                    <span class="must">必須</span>
+                    <span class="badge badge-danger ml-1">必須</span>
                     <div class="col-md-10">
                         <input type="tel" class="form-control" name="tel" value="{{ old('tel') }}">
                     </div>
                 </div>
                 <div class="form-group row">
                     <label class="col-md-2" for="email">メールアドレス</label>
-                    <span class="must">必須</span>
+                    <span class="badge badge-danger ml-1">必須</span>
                     <div class="col-md-10">
                         <input type="email" class="form-control" name="email" value="{{ old('email') }}">
                     </div>

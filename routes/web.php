@@ -17,6 +17,12 @@ Route::get('/', function () {
 Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
     Route::get('create/top', 'Admin\TopController@app');
     Route::post('create/top','Admin\TopController@create');
-    Route::get('create/input', 'Admin\TopController@input');
-    Route::post('create/input','Admin\TopController@confirm');
+});
+Route::group(['prefix' =>'contact'], function() {
+    //入力ページ
+    Route::get('/', 'ContactController@index')->name('contact.index');
+    //確認ページ
+    Route::post('/confirm','ContactController@confirm')->name('contact.confirm');
+    //送信完了ページ
+    Route::post('/thanks','ContactController@send')->name('contact.send');
 });

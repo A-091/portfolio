@@ -9,8 +9,8 @@ class Confirm extends Model
     protected $guarded = array('id');
     public static $rules = array(
         'contents' => 'required',
-        'name' => 'required',
-        'tel' => 'required',
+        'name' => 'required|max:10',
+        'tel' => 'required|numeric',
         'email' => 'required',
     );
 }

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateConfirmTable extends Migration
+class ContactConfirmTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateConfirmTable extends Migration
      */
     public function up()
     {
-        Schema::create('confirm', function (Blueprint $table) {
+        Schema::contact('confirm', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('contents');
             $table->string('name');
