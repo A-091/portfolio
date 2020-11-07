@@ -1,4 +1,4 @@
-git add body {
+body {
   background-repeat: no-repeat;
   background-position: center;
   background-color: #808080;
@@ -7,13 +7,29 @@ git add body {
   flex-wrap: wrap;
 }
 
-.navbar-laravel {
-  background-color: #808080;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+.header left {
+  width: 200px;
+  margin-right: 20px;
+  float: left;
 }
 
-.navbar-brand {
-  color: #FFF !important;
+.navbar brand {
+  color: #0000FF !important;
+  font-size: 80px;
+}
+
+.navbar text {
+  font-size: 20px;
+}
+
+.header right {
+  width: 200px;
+  float: right;
+}
+
+.container-fluid {
+  background-color: #808080;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
 }
 
 .table-dark {
@@ -35,5 +51,10 @@ git add body {
 
 .login-body {
   background-color: rgba(0, 0, 0, 0.25);
+}
+
+.copyright {
+  color: #777;
+  text-align: center;
 }
 

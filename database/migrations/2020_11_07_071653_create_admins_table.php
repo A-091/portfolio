@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class ContactConfirmTable extends Migration
+class CreateAdminsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,13 @@ class ContactConfirmTable extends Migration
      */
     public function up()
     {
-        Schema::create('confirm', function (Blueprint $table) {
+        Schema::create('admins', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('contents');
             $table->string('name');
-            $table->string('tel');
-            $table->string('email');
+            $table->string('email')->unique();
+            $table->timestamp('email_verified_at')->nullable();
+            $table->string('password');
+            $table->rememberToken();
             $table->timestamps();
         });
     }
@@ -30,6 +31,6 @@ class ContactConfirmTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('confirm');
+        Schema::dropIfExists('admins');
     }
 }
