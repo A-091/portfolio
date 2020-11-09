@@ -15,6 +15,15 @@ class ContactController extends Controller
     }
     public function confirm(Request $request)
     {
+        $a = [
+            'AAA' => 0,
+            'BBB' => 0,
+            'CCC' => 0,
+            'DDD' => 0,
+        ];
+
+        $b = $a['BBB'];
+
         //バリデーションを実行（結果に問題があれば処理を中断してエラーを返す）
         $request->validate([
             'contents' => 'required',
