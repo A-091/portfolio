@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\User\Auth;
+namespace App\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
@@ -39,11 +39,6 @@ class LoginController extends Controller
     {
         $this->middleware('guest:user')->except('logout');
     }
-    // Guardの認証方法を指定
-    protected function guard()
-    {
-        return Auth::guard('user');
-    }
     // ログイン画面
     public function showLoginForm()
     {
@@ -62,5 +57,9 @@ class LoginController extends Controller
     {
         return redirect(route('user.login'));
     }
-
+    // Guardの認証方法を指定
+    protected function guard()
+    {
+        return Auth::guard('user');
+    }
 }

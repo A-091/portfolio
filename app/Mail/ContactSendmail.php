@@ -11,17 +11,18 @@ class ContactSendmail extends Mailable
 {
     use Queueable, SerializesModels;
 
-    private $contents;
-    private $name;
-    private $tel;
-    private $email;
+    private string $contents;
+    private string $name;
+    private string $tel;
+    private string $email;
 
     /**
      * Create a new message instance.
      *
+     * @param mixed $inputs
      * @return void
      */
-    public function __construct( $inputs )
+    public function __construct($inputs)
     {
         $this->contents = $inputs['contents'];
         $this->name = $inputs['name'];
@@ -37,10 +38,10 @@ class ContactSendmail extends Mailable
     public function build()
     {
         return $this
-        ->from('example@gmail.com')
-        ->subject('自動送信メール')   
-        ->view('contact.mail')
-        ->with([
+            ->from('example@gmail.com')
+            ->subject('自動送信メール')
+            ->view('contact.mail')
+            ->with([
             'contents' => $this->contents,
             'name' => $this->name,
             'tel' => $this->tel,

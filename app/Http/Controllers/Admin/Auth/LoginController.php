@@ -39,10 +39,6 @@ class LoginController extends Controller
     {
         $this->middleware('guest:admin')->except('logout');
     }
-    protected function guard()
-    {
-        return Auth::guard('admin');
-    }
 
     public function showLoginForm()
     {
@@ -59,5 +55,9 @@ class LoginController extends Controller
     public function loggedOut(Request $request)
     {
         return redirect(route('admin.login'));
+    }
+    protected function guard()
+    {
+        return Auth::guard('admin');
     }
 }
