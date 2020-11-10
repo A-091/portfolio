@@ -6223,6 +6223,7 @@ a.close.disabled {
   min-height: calc(100% - 1rem);
 }
 
+/*noinspection CssInvalidPropertyValue,CssInvalidPropertyValue,CssInvalidPropertyValue,CssInvalidPropertyValue,CssInvalidPropertyValue,CssInvalidPropertyValue,CssInvalidPropertyValue,CssInvalidPropertyValue,CssInvalidPropertyValue,CssInvalidPropertyValue,CssInvalidPropertyValue,CssInvalidPropertyValue*/
 .modal-dialog-centered::before {
   display: block;
   height: calc(100vh - 1rem);
@@ -6344,6 +6345,7 @@ a.close.disabled {
     min-height: calc(100% - 3.5rem);
   }
 
+  /*noinspection CssInvalidPropertyValue,CssInvalidPropertyValue,CssInvalidPropertyValue,CssInvalidPropertyValue,CssInvalidPropertyValue,CssInvalidPropertyValue,CssInvalidPropertyValue,CssInvalidPropertyValue,CssInvalidPropertyValue,CssInvalidPropertyValue,CssInvalidPropertyValue,CssInvalidPropertyValue*/
   .modal-dialog-centered::before {
     height: calc(100vh - 3.5rem);
     height: -webkit-min-content;
@@ -10776,6 +10778,7 @@ a.text-dark:focus {
   color: rgba(255, 255, 255, 0.5) !important;
 }
 
+/*noinspection CssInvalidPropertyValue,CssInvalidPropertyValue,CssInvalidPropertyValue,CssInvalidPropertyValue,CssInvalidPropertyValue,CssInvalidPropertyValue,CssInvalidPropertyValue,CssInvalidPropertyValue,CssInvalidPropertyValue*/
 .text-hide {
   font: 0/0 a;
   color: transparent;

@@ -14,8 +14,8 @@ use Illuminate\View\View;
 class TopController extends Controller
 {
     /**
-     * @return Application|Factory|View
      *@throws BindingResolutionException
+     * @return Application|Factory|View
      */
     public function app()
     {
@@ -25,8 +25,8 @@ class TopController extends Controller
     /**
      * @param Request $requeest
      *
-     * @return Application|RedirectResponse|Redirector
      *@throws BindingResolutionException
+     * @return Application|Redirector|RedirectResponse
      */
     public function create(Request $requeest)
     {

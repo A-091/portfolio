@@ -1,4 +1,4 @@
-@extends('layouts.admin')
+@extends('layouts.user.admin')
 @section('title','お問合せフォーム')
 @section('content')
 <div class="container">

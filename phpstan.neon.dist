@@ -1,0 +1,71 @@
+includes:
+  - ./vendor/nunomaduro/larastan/extension.neon
+  - ./vendor/phpstan/phpstan-strict-rules/rules.neon
+  - ./vendor/matla/phpstancs/extension.neon
+  - ./vendor/phpstan/phpstan-mockery/extension.neon
+  - ./vendor/phpstan/phpdoc-parser/phpstan.neon
+  - ./vendor/phpstan/phpstan-webmozart-assert/extension.neon
+  - ./vendor/grzesie2k/phpstan-gql-rule/rules.neon
+  - ./vendor/timeweb/phpstan-enum/extension.neon
+  - ./vendor/phpstan/phpstan-doctrine/extension.neon
+  - ./vendor/phpstan/phpstan-phpunit/extension.neon
+  - ./vendor/phpstan/phpstan-deprecation-rules/rules.neon
+  - ./vendor/pepakriz/phpstan-exception-rules/extension.neon
+  - ./vendor/slam/phpstan-extensions/conf/slam-rules.neon
+  - ./vendor/ekino/phpstan-banned-code/extension.neon
+
+#   - ./vendor/finwe/phpstan-faker/extension.neon
+
+parameters:
+
+  paths:
+    - app
+    - tests
+
+  phpstancs:
+    runCS: true
+
+  # The level 8 is the highest level
+  level: max
+
+  bootstrap: bootstrap/app.php
+#  autoload_files:
+#    - _ide_helper.php
+
+  exceptionRules:
+    reportUnusedCatchesOfUncheckedExceptions: false
+    reportUnusedCheckedThrowsInSubtypes: false
+    reportCheckedThrowsInGlobalScope: false
+    ignoreDescriptiveUncheckedExceptions: false
+    uncheckedExceptions:
+      - LogicException
+      - PHPUnit\Framework\Exception
+      - Illuminate\Contracts\Container\BindingResolutionException
+
+  ignoreErrors:
+    - '#Abstract class [a-zA-Z0-9\\_]+ should start with "Abstract" prefix#'
+    - '#Trait [a-zA-Z0-9\\_]+ should end with "Trait" suffix#'
+    - '#Class [a-zA-Z0-9\\_]+ should be written with ::class notation, string found#'
+    - '#Dynamic call to static method Illuminate\\Foundation\\Application::isLocal\(\)#'
+    - '#Anonymous function should have native return typehint "[a-zA-Z0-9\\_]+"#'
+    -
+      message: '#Call to an undefined method Illuminate\\Contracts\\Foundation\\Application::isLocal\(\)#'
+      path: app/Providers/LocalServiceProvider.php
+    -
+      message: '#Fetching deprecated class constant CAPABILITY of class [a-zA-Z0-9\\_]+#'
+      path: tests/DuskTestCase.php
+    -
+      message: '#Call to method [a-zA-Z0-9\\_]+::assertTrue\(\) with true will always evaluate to true#'
+      path: tests/Unit/ExampleTest.php
+    -
+      message: '#Missing @throws Throwable annotation#'
+      path: tests/Browser/ExampleTest.php
+
+
+
+  excludes_analyse:
+    - app/Providers/HorizonServiceProvider.php
+    - tests/Bootstrap.php
+
+  checkMissingIterableValueType: false
+

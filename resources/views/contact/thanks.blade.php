@@ -1,4 +1,4 @@
-@extends('layouts.admin')
+@extends('layouts.user.admin')
 @section('title','お問合せメールフォーム')
 @section('content')
 <h1>{{ __('送信完了') }}</h1>

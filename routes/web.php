@@ -18,6 +18,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
     Route::get('create/top', 'Admin\TopController@app');
     Route::post('create/top', 'Admin\TopController@create');
 });
+//問合せ
 Route::group(['prefix' => 'contact'], function () {
     //入力ページ
     Route::get('/', 'ContactController@index')->name('contact.index');
@@ -66,3 +67,8 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function () {
         Route::get('home', 'HomeController@index');
     });
 });
+//ニュース記事
+Route::group(['prefix' => 'admin'], function() {
+    Route::get('news/create', 'Admin\NewsController@add');
+});
+
