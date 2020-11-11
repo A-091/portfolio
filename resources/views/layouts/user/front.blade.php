@@ -14,7 +14,7 @@
         <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,600" rel="stylesheet" type="text/css">
         <!-- Styles -->
         <link href="{{ secure_asset('css/app.css') }}" rel="stylesheet">{{-- Laravel標準で用意されているCSSを読み込みます --}}
-        <link href="{{ secure_asset('css/admin.css') }}" rel="stylesheet">
+        <link href="{{ secure_asset('css/front.css') }}" rel="stylesheet">
     </head>
     <body>
         <div class="container">

@@ -25,7 +25,7 @@
         "webmozart/assert": "^1.7"
     },
     "require-dev": {
-        "barryvdh/laravel-debugbar": "^3.2",
+        "barryvdh/laravel-debugbar": "3.4.2",
         "barryvdh/laravel-ide-helper": "^2.6",
         "ekino/phpstan-banned-code": "^0.3.1",
         "ergebnis/phpstan-rules": "^0.14.4",

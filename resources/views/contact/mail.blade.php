@@ -1,4 +1,4 @@
-@extends('layouts.user.admin')
+@extends('layouts.user.front')
 @section('title','お問合せ完了')
 @section('content')
 お問い合わせ内容を受け付けました。<br>
