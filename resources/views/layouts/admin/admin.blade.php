@@ -19,47 +19,40 @@
     <link href="{{ secure_asset('css/admin.css') }}" rel="stylesheet">
 </head>
 <body>
-<div class="container">
-    <div class="row">
-        <div id="header left">
-            <p class="header text">阪神間で口コミNo.1　骨盤矯正・交通事故施術で評判の整骨院</p>
-            <a class="navbar brand" href="#">091整骨院</a>
-        </div>
-    </div>
-    <div class="row">
-        <div id="header right">
-            <a class="tel">TEL ; 06-1234-5678</a><br>
-            <a class="time">TEL予約受付時間 9:00～19:00 <span class="hot">日祝 休診</span></a><br>
-            <a class="email">E-mail ; abc@xyz.ne.jp</a><br>
-            <a class="web">WEB予約<span class="reception">24時間受付</span></a><br>
-            <a href="reservation/create"></a>
-        </div>
-    </div>
-    <nav class="navbar bg-info navbar-expand-md">
-        <div class="row">
-            <div class="collapse navbar-collapse justify-content-between" id="navbarNav4">
-                <div class="navbar nav">
-                    <a class="nav-item nav-link active" href="#">TOP<span class="sr-only">(current)</span></a>
-                    <a href="#">施術メニュー</a>
-                    <a href="#">お客様の声</a>
-                    <a href="#">お問合せ</a>
-                </div>
-                <div class="navbar nav navbar right">
-                    <a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a>
+    <div id="app">
+        {{-- 画面上部に表示するナビゲーションバーです。 --}}
+        <nav class="navbar navbar-expand-md navbar-dark navbar-laravel">
+            <div class="container">
+                <a class="navbar-brand" href="{{ url('/') }}">
+                    {{ config('app.name', 'Laravel') }}
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <!-- Left Side Of Navbar -->
+                    <ul class="navbar-nav mr-auto">
+
+                    </ul>
+
+                    <!-- Right Side Of Navbar -->
+                    <ul class="navbar-nav ml-auto">
+                    </ul>
                 </div>
             </div>
-        </div>
-    </nav>
-    <div id="app">
+        </nav>
+        {{-- ここまでナビゲーションバー --}}
+
+        <main class="py-4">
+            {{-- コンテンツをここに入れるため、@yieldで空けておきます。 --}}
+            @yield('content')
+        </main>
+        <footer class="footer">
+            <div class="container">
+                <p id="copyright">(C) Copyright 091整骨院.</p>
+            </div>
+        </footer>
     </div>
-    <main class="py-4">
-        @yield('content') {{-- コンテンツをここに入れるため、@yieldで空けておきます。 --}}
-    </main>
-    <footer class="footer">
-        <div class="container">
-            <p id="copyright">(C) Copyright 091整骨院.</p>
-        </div>
-    </footer>
-</div>
 </body>
 </html>

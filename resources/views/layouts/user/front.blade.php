@@ -15,33 +15,43 @@
         <!-- Styles -->
         <link href="{{ secure_asset('css/app.css') }}" rel="stylesheet">{{-- Laravel標準で用意されているCSSを読み込みます --}}
         <link href="{{ secure_asset('css/front.css') }}" rel="stylesheet">
-        <link rel="stylesheet" href="{{ asset('css/contact.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/front.css') }}">
     </head>
     <body>
         <div class="container">
-            <div class="row">
-                <div id="header left">
-                    <p class="header text">阪神間で口コミNo.1　骨盤矯正・交通事故施術で評判の整骨院</p>
-                    <a class="navbar brand" href="#">091整骨院</a>
-                </div>
-            </div>
-            <div class="row">
-                <div id="header right">
-                    <a class="tel">TEL ; 06-1234-5678</a><br>
-                    <a class="time">TEL予約受付時間 9:00～19:00 <span class="hot">日祝 休診</span></a><br>
-                    <a class="email">E-mail ; abc@xyz.ne.jp</a><br>
-                    <a class="web">WEB予約<span class="reception">24時間受付</span></a><br>
-                    <a href="reservation/create"></a>
-                </div>
-            </div>
-            <nav class="navbar bg-info navbar-expand-md">
+            <div class="header">
                 <div class="row">
-                    <div class="collapse navbar-collapse justify-content-between" id="navbarNav4">
-                        <div class="navbar nav">
-                            <a class="nav-item nav-link active" href="#">TOP<span class="sr-only">(current)</span></a>
-                            <a href="#">施術メニュー</a>
-                            <a href="#">お客様の声</a>
-                            <a href="#">お問合せ</a>
+                    <div id="header left">
+                        <p class="header text">阪神間で口コミNo.1　骨盤矯正・交通事故施術で評判の整骨院</p>
+                        <a class="navbar brand" href="#">091整骨院</a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div id="header right">
+                        <a class="tel">TEL ; 06-1234-5678</a><br>
+                        <a class="time">TEL予約受付時間 9:00～19:00 <span class="hot">日祝 休診</span></a><br>
+                        <a class="email">E-mail ; abc@xyz.ne.jp</a><br>
+                        <a class="web">WEB予約<span class="reception">24時間受付</span></a><br>
+                        <a href="reservation/create"></a>
+                    </div>
+                </div>
+            </div>
+            <nav class="navbar bg-secondary navbar-expand-md">
+                <div class="row">
+                    <div class="collapse navbar-collapse justify-content-start" id="navbarNav4">
+                        <ul class="navbar nav">
+                            <li class="nav-item active">
+                                <a class="nav-item nav-link active" href="#">TOP<span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#">施術メニュー</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#">お客様の声</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#">お問合せ</a>
+                            </li>
                         </div>    
                         <div class="navbar nav navbar right">
                             <a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a>
