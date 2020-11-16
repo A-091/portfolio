@@ -1,11 +1,20 @@
 body {
   color: #000;
+  background-color: papayawhip;
 }
 
 .header {
   .logo {
       width: 120px;
       height: 82px;
+  }
+  .text {
+    font-size: 12px;
+  }
+  .navbar-brand {
+    font-size: 36px;
+    width: 50%;
+
   }
 }
 
@@ -54,4 +63,5 @@ body {
       }
     }
   }
+
 }

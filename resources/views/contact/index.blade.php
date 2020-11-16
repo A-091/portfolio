@@ -19,28 +19,36 @@
                 </ul>
                 @endif
                 <div class="form-group row">
-                <p>
-                    <label for="contents">お問合せ内容</label><br>
-                    <textarea name="contents" id="contents" >{{ old('contents') }}</textarea>
-                </p>
+                    <div class="col-md-10">
+                        <p>
+                            <label for="contents">お問合せ内容</label><br>
+                            <textarea name="contents" id="contents" >{{ old('contents') }}</textarea>
+                        </p>
+                    </div>
                 </div>
                 <div class="form-group row">
-                <p>
-                    <label for="name">お名前</label><br>
-                    <input type="text"  name="name" id="name" value="{{ old('name') }}" required>
-                </p>
+                    <div class="col-md-10">
+                        <p>
+                            <label for="name">お名前</label><br>
+                            <input type="text"  name="name" id="name" value="{{ old('name') }}" required>
+                        </p>
+                    </div>
                 </div>
                 <div class="form-group row">
-                <p>
-                    <label for="tel">電話番号</label><br>
-                    <input type="tel" name="tel" id="tel" value="{{ old('tel') }}" required>
-                </p>
+                    <div class="col-md-10">
+                        <p>
+                            <label for="tel">電話番号</label><br>
+                            <input type="tel" name="tel" id="tel" value="{{ old('tel') }}" required>
+                        </p>
+                    </div>
                 </div>
                 <div class="form-group row">
-                <p>
-                    <label for="email">メールアドレス</label><br>
-                    <input type="email" name="email" id="email" value="{{ old('email') }}" required>
-                </p>
+                    <div class="col-md-10">
+                        <p>
+                            <label for="email">メールアドレス</label><br>
+                            <input type="email" name="email" id="email" value="{{ old('email') }}" required>
+                        </p>
+                    </div>
                 </div>
                 <div class="form-group row">
                 <h3>個人情報保護方針</h3>

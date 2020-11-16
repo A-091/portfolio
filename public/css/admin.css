@@ -44,3 +44,18 @@ body {
   text-align: center;
 }
 
+.management {
+  background-color: #2fa360;
+  margin: 20px;
+  padding: 20px 0;
+  width: 300px;
+  grid-gap: 10px 2em;
+  flex-wrap: wrap;
+}
+
+.management p {
+  margin: 0;
+  text-align: center;
+  color: #fff;
+}
+

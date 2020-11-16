@@ -14,10 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
-Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
-    Route::get('create/top', 'Admin\TopController@app');
-    Route::post('create/top', 'Admin\TopController@create');
-});
+
 //問合せ
 Route::group(['prefix' => 'contact'], function () {
     //入力ページ
@@ -78,4 +75,8 @@ Route::group(['prefix' => 'admin'], function() {
     
 });
 Route::get('/', 'NewsController@index');
-
+//admin top
+Route::group(['prefix' => 'admin'], function() {
+    Route::get('top/create', 'Admin\TopController@add');
+    Route::post('top/create', 'Admin\TopController@create');
+});
