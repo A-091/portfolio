@@ -14,6 +14,10 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
 
 //問合せ
 Route::group(['prefix' => 'contact'], function () {
@@ -74,9 +78,14 @@ Route::group(['prefix' => 'admin'], function() {
     Route::get('news/delete', 'Admin\NewsController@delete');
     
 });
-Route::get('/', 'NewsController@index');
+Route::get('/news', 'NewsController@index');
 //admin top
 Route::group(['prefix' => 'admin'], function() {
     Route::get('top/create', 'Admin\TopController@add');
     Route::post('top/create', 'Admin\TopController@create');
+});
+//顧客
+Route::group(['prefix' => 'admin'], function() {
+    Route::get('customer', 'Admin\CustomerController@add');
+    Route::post('customer/create', 'Admin\CustomerController@create');
 });

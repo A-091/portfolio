@@ -14,7 +14,16 @@ body {
   .navbar-brand {
     font-size: 36px;
     width: 50%;
-
+  }
+  .left {
+    position:absolute;
+    left: 10px;
+    top: 10px;
+  }
+  .right {
+    position:absolute;
+    right: 10px;
+    top: 10px;
   }
 }
 

@@ -3,48 +3,28 @@
 @section('content')
 
     <div class="container">
-        <div class="row">
+        <div class="row justify-content-center">
             <div class="col-md-8 mx-auto">
                 <div class="top">
                     <h2>管理TOP</h2>
-                    <form action="{{ action('Admin\TopController@create') }}" method="post"
-                          enctype="multipart/form-data">
+                    <form action="{{ action('Admin\TopController@create') }}" method="post" enctype="multipart/form-data">
                         <div class="form-group row">
                             <label class="col-md-2" for="title">091 システム管理</label>
                             <div class="form-group row">
-                                <div class="reservation management">
-                                    <p>予約マスタ</p>
+                            @if (session('status'))
+                                <div class="alert alert-success" role="alert">
+                                {{ session('status') }}
                                 </div>
-                            </div>
-                            <div class="form-group row">
-                                <div class="customer management">
-                                    <p>顧客マスタ</p>
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <div class="authority management">
-                                    <p>管理マスタ</p>
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <div class="attendance management">
-                                    <p>勤怠マスタ</p>
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <div class="news management">
-                                    <p>記事マスタ</p>
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <div class="form management">
-                                    <p>フォームマスタ</p>
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <div class="analysis management">
-                                    <p>分析マスタ</p>
-                                </div>
+                            @endif
+                                <ul>
+                                        <li><a href="/#">予約マスタ</a></li>
+                                        <li><a href="/#">顧客マスタ</a></li>
+                                        <li><a href="/#">管理マスタ</a></li>
+                                        <li><a href="/#">勤怠マスタ</a></li>
+                                        <li><a href="/#">記事マスタ</a></li>
+                                        <li><a href="/#">フォームマスタ</a></li>
+                                        <li><a href="/#">分析マスタ</a></li>
+                                </ul>
                             </div>
                         </div>
                     </form>
