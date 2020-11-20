@@ -9,10 +9,10 @@ class CustomerController extends Controller
 {
     public function add()
     {
-        return view('admin.customer.create');
+        return view('admin.customer.index');
     }
     public function create(Request $request)
     {
-        return redirect('admin/customer/create');
+        return redirect('admin/customer/index');
     }
 }
