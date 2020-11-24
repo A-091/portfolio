@@ -14,7 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
-Auth::routes();
+//Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/staff', [\App\Http\Controllers\StaffController::class])->name('staff.index')->middleware('auth');
@@ -29,7 +29,7 @@ Route::group(['prefix' => 'contact'], function () {
     Route::post('/thanks', 'ContactController@send')->name('contact.send');
 });
 
-Auth::routes();
+//Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
@@ -69,26 +69,24 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function () {
     });
 });
 //ニュース記事
-Route::group(['prefix' => 'admin'], function() {
+Route::group(['prefix' => 'admin'], function () {
     Route::get('news/create', 'Admin\NewsController@add');
     Route::post('news/create', 'Admin\NewsController@create');
     Route::get('news', 'Admin\NewsController@index');
     Route::get('news/edit', 'Admin\NewsController@edit');
     Route::post('news/edit', 'Admin\NewsController@update');
     Route::get('news/delete', 'Admin\NewsController@delete');
-    
 });
 Route::get('/news', 'NewsController@index');
 //admin top
-Route::group(['prefix' => 'admin'], function() {
+Route::group(['prefix' => 'admin'], function () {
     Route::get('top/create', 'Admin\TopController@add');
     Route::post('top/create', 'Admin\TopController@create');
 });
 //顧客
-Route::group(['prefix' => 'admin'], function() {
+Route::group(['prefix' => 'admin'], function () {
     Route::get('customer', 'Admin\CustomerController@add');
     Route::post('customer/index', 'Admin\CustomerController@index');
 });
 
-Route::resource('/customers', CustomerController::class)->middleware('auth');
-
+//Route::resource('/customers', CustomerController::class)->middleware('auth');

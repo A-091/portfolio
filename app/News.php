@@ -6,17 +6,15 @@ use Illuminate\Database\Eloquent\Model;
 
 class News extends Model
 {
-    protected $guarded = array('id');
-
     // 以下を追記
-    public static $rules = array(
+    public static $rules = [
         'title' => 'required',
         'body' => 'required',
-    );
+    ];
+    protected $guarded = ['id'];
     // Newsモデルに関連付けを行う
     public function histories()
     {
-      return $this->hasMany('App\History');
-
+        return $this->hasMany('App\History');
     }
 }

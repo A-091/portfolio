@@ -11,6 +11,6 @@ class CustomerLogsTableSeeder extends Seeder
      */
     public function run()
     {
-        factory('App\CustomerLog',120)->create();
+        factory('App\CustomerLog', 120)->create();
     }
 }

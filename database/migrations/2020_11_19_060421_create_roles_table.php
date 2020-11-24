@@ -20,8 +20,10 @@ class CreateRolesTable extends Migration
             $table->string('memo')->comment('備考');
             $table->timestamps();
         });
-        DB::table('roles')->insert(['id'=>1,'name'=>'sv','memo'=>'管理者']);
-        DB::table('roles')->insert(['id'=>2,'name'=>'clerk','memo'=>'スタッフ']);
+        /*
+                DB::table('roles')->insert(['id'=>1,'name'=>'sv','memo'=>'管理者']);
+                DB::table('roles')->insert(['id'=>2,'name'=>'clerk','memo'=>'スタッフ']);
+        */
     }
 
     /**

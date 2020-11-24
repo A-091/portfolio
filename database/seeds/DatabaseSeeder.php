@@ -15,9 +15,8 @@ class DatabaseSeeder extends Seeder
             UsersTableSeeder::class,
             AdminsTableSeeder::class,
             RolesTableSeeder::class,
-            ShopsTableSeeder::class,
-            CustomersTableSeeder::class,
-            CustomerLogsTableSeeder::class,
+//            CustomersTableSeeder::class,
+//            CustomerLogsTableSeeder::class,
         ]);
     }
 }
