@@ -7,7 +7,6 @@
             <div class="col-md-8 mx-auto">
                 <div class="customer">
                     <h2>管理マスタ</h2>
-                    enctype="multipart/form-data">
                     <div class="form-group row">
                         <label class="col-md-2" for="title">顧客管理</label>
                         <ul>
@@ -20,7 +19,6 @@
                         <thead>
                         <tr style="background-color: lightgray">
                             <td>氏名</td>
-                            <td>店舗</td>
                             <td>郵便番号</td>
                             <td>住所</td>
                         </tr>

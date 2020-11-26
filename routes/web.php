@@ -85,8 +85,9 @@ Route::group(['prefix' => 'admin'], function () {
 });
 //顧客
 Route::group(['prefix' => 'admin'], function () {
-    Route::get('customer', 'Admin\CustomerController@add');
-    Route::post('customer/index', 'Admin\CustomerController@index');
+    Route::get('customer', 'Admin\CustomerController@index');
+    Route::post('customer', 'Admin\CustomerController@create');
+    //Route::get('customer/create', 'Admin\CustomerController@create');
 });
 
 //Route::resource('/customers', CustomerController::class)->middleware('auth');
