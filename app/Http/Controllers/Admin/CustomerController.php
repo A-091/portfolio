@@ -4,7 +4,8 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Customer;
+use App\Models\Customer;
+
 
 class CustomerController extends Controller
 {
@@ -14,27 +15,41 @@ class CustomerController extends Controller
         return view('admin.customer.index', ['customers' => $customers]);
         
     }
+    
     public function create(Request $request)
     {
-        return redirect('admin/customer/index');
+        return view('admin.customer.create');
     }
-
-    public function show(\App\Models\Customer $customer)
+    
+    public function store(Request $request)
     {
-        $this->authorize('view', $customer);
-
-        return view('customers.show', compact('customer'));
+        $attribute = request()->validate([
+        'name' => ['required', 'min:3', 'max:32'],
+            'postal' => ['required',],
+            'address' => ['required',],
+            'email' => ['required', 'E-Mail'],
+            'phone' => ['required',],
+        ]);
+        $customer = Customer::create($attribute);
+        return redirect('customer');
     }
-
+    
+    public function show($id)
+    {
+       
+        return view('admin.customer.show', ['customer' => Customer::findOrFail($id)]);
+    }
+    
     public function edit(Customer $customer)
     {
     }
-
+    
     public function update(Request $request, Customer $customer)
     {
     }
-
+    
     public function destroy(Customer $customer)
     {
     }
+    
 }

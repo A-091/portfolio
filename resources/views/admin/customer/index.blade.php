@@ -10,9 +10,8 @@
                     <div class="form-group row">
                         <label class="col-md-2" for="title">顧客管理</label>
                         <ul>
-                            <li><a href="/#">顧客一覧</a></li>
-                            <li><a href="/#">顧客新規登録</a></li>
-                            <li><a href="/#">顧客検索</a></li>
+                            <li><a href="customer/create">顧客新規登録</a></li>
+                            <li><a href="#">顧客検索</a></li>
                         </ul>
                     </div>
                     <table width="100%" border="1">

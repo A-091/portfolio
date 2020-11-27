@@ -17,8 +17,8 @@ Route::get('/', function () {
 //Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/staff', [\App\Http\Controllers\StaffController::class])->name('staff.index')->middleware('auth');
-Route::get('/staff', [\App\Http\Controllers\StaffController::class])->name('staff.index')->middleware('auth');
+Route::get('/staff', [App\Http\Controllers\StaffController::class])->name('staff.index')->middleware('auth');
+Route::get('/staff', [App\Http\Controllers\StaffController::class])->name('staff.index')->middleware('auth');
 //問合せ
 Route::group(['prefix' => 'contact'], function () {
     //入力ページ
@@ -86,8 +86,13 @@ Route::group(['prefix' => 'admin'], function () {
 //顧客
 Route::group(['prefix' => 'admin'], function () {
     Route::get('customer', 'Admin\CustomerController@index');
-    Route::post('customer', 'Admin\CustomerController@create');
-    //Route::get('customer/create', 'Admin\CustomerController@create');
+    //Route::post('customer', 'Admin\CustomerController@create');
+    Route::post('customer','Admin\CustomerController@store');
+    Route::get('customer/create', 'Admin\CustomerController@create');
+    Route::get('customer/{customer}', 'Admin\CustomerController@show');
+    Route::get('customer/{customer}edit', 'Admin\CustomerController@edit');
+    Route::post('/PATCH/customer/{customer}', 'Admin\CustomerController@update');
+    Route::get('customer/{customer}', 'Admin\CustomerController@destroy');
 });
 
 //Route::resource('/customers', CustomerController::class)->middleware('auth');
