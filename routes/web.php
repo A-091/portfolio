@@ -87,8 +87,8 @@ Route::group(['prefix' => 'admin'], function () {
 Route::group(['prefix' => 'admin'], function () {
     //Route::get('customer', 'Admin\CustomerController@index');
     //Route::post('customer', 'Admin\CustomerController@create');
-    //Route::post('customer','Admin\CustomerController@store');
-    //Route::get('customer/create', 'Admin\CustomerController@create');
+    //Route::post('/customers',Admin\CustomerController::class);
+    //Route::get('/customers/create', Admin\CustomerController::class);
     //Route::get('customer/{customer}', 'Admin\CustomerController@show');
     //Route::get('customer/{customer}edit', 'Admin\CustomerController@edit');
     //Route::post('/PATCH/customer/{customer}', 'Admin\CustomerController@update');

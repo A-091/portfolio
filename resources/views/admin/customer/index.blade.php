@@ -9,7 +9,7 @@
         <div class="row">
             <div class="col-md-4">
                 <ul>
-                    <li><a href="customer/create">顧客新規登録</a></li>
+                    <li><a href="customers/create">顧客新規登録</a></li>
                     <li><a href="#">顧客検索</a></li>
                 </ul>
             </div>
