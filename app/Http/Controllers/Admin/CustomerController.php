@@ -36,7 +36,7 @@ class CustomerController extends Controller
     
     public function show($id)
     {
-       
+        //$this->authorize('view', $customer);
         return view('admin.customer.show', ['customer' => Customer::findOrFail($id)]);
     }
     
@@ -46,10 +46,24 @@ class CustomerController extends Controller
     
     public function update(Request $request, Customer $customer)
     {
+        $this->validate($request, customer::$rules);
+        $customer_form = $request->all();
+        unset($customer_form['_token']);
+        $customer->fill($customer_form);
+        $customer->save();
     }
     
     public function destroy(Customer $customer)
     {
+    
+    }
+    
+    public function  delete(Request $request)
+    {
+        $customer = customer::find($request->id);
+        $customer->delete();
+        return redirect('admin/customer');
+        
     }
     
 }

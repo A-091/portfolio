@@ -85,14 +85,15 @@ Route::group(['prefix' => 'admin'], function () {
 });
 //顧客
 Route::group(['prefix' => 'admin'], function () {
-    Route::get('customer', 'Admin\CustomerController@index');
+    //Route::get('customer', 'Admin\CustomerController@index');
     //Route::post('customer', 'Admin\CustomerController@create');
-    Route::post('customer','Admin\CustomerController@store');
-    Route::get('customer/create', 'Admin\CustomerController@create');
-    Route::get('customer/{customer}', 'Admin\CustomerController@show');
-    Route::get('customer/{customer}edit', 'Admin\CustomerController@edit');
-    Route::post('/PATCH/customer/{customer}', 'Admin\CustomerController@update');
-    Route::get('customer/{customer}', 'Admin\CustomerController@destroy');
+    //Route::post('customer','Admin\CustomerController@store');
+    //Route::get('customer/create', 'Admin\CustomerController@create');
+    //Route::get('customer/{customer}', 'Admin\CustomerController@show');
+    //Route::get('customer/{customer}edit', 'Admin\CustomerController@edit');
+    //Route::post('/PATCH/customer/{customer}', 'Admin\CustomerController@update');
+    //Route::get('customer/{customer}destroy', 'Admin\CustomerController@destroy');
+    Route::resource('/customers', Admin\CustomerController::class);
 });
 
 //Route::resource('/customers', CustomerController::class)->middleware('auth');

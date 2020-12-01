@@ -6,7 +6,7 @@
         <div class="row">
             <div class="col-md-8 mx-auto">
                 <div class="customer">
-                    <h2>管理マスタ 新規登録</h2>
+                    <h2>顧客マスタ 新規登録</h2>
                     <div class="form-group row">
                         <label class="col-md-2" for="title">顧客管理</label>
                         <div class="row justify-content-center">

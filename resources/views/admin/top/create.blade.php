@@ -18,7 +18,7 @@
                             @endif
                                 <ul>
                                         <li><a href="/#">予約マスタ</a></li>
-                                        <li><a href="/#">顧客マスタ</a></li>
+                                        <li><a href="/admin/customers">顧客マスタ</a></li>
                                         <li><a href="/#">管理マスタ</a></li>
                                         <li><a href="/#">勤怠マスタ</a></li>
                                         <li><a href="/#">記事マスタ</a></li>
