@@ -2,7 +2,6 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-color: #000;
-  color: #fff;
 }
 
 .navbar-laravel {
@@ -40,7 +39,7 @@ body {
 }
 
 .copyright {
-  color: #777;
+  color: #fff;
   text-align: center;
 }
 
@@ -59,7 +58,11 @@ body {
   color: #fff;
 }
 
-.card {
-  font-color: black;
+.card p {
+  font-color: #000;
+}
+
+h2 {
+  font-color: #fff;
 }
 

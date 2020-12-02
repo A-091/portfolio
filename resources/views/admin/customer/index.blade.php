@@ -19,14 +19,13 @@
             <table width="100%" border="1">
                 <thead>
                 <tr style="background-color: lightgray">
-                    <td>ID</td>
                     <td>氏名</td>
                     <td>郵便番号</td>
                     <td>住所</td>
                 </tr>
                 </thead>
                 @foreach($customers as $customer)
-                    <tr>
+                    <tr style="background-color: lightgray">
                         <th><a href="{{ action('Admin\CustomerController@show', $customer->id) }}">{{ $customer->name }}</a></th>
                         <td>{{ $customer->postal }}</td>
                         <td>{{ $customer->address }}</td>
