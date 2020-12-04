@@ -94,6 +94,9 @@ Route::group(['prefix' => 'admin'], function () {
     //Route::post('/PATCH/customer/{customer}', 'Admin\CustomerController@update');
     //Route::get('customer/{customer}destroy', 'Admin\CustomerController@destroy');
     Route::resource('/customers', Admin\CustomerController::class);
+    Route::post('customer_search', 'CustomerSearchController@search');
+    Route::get('customer_search', 'CustomerSearchController@index');
+    Route::post('customer_search', 'CustomerSearchController@search');
+    Route::post('/customers/{customer}/logs', 'CustomerLogController');
 });
 
-//Route::resource('/customers', CustomerController::class)->middleware('auth');
