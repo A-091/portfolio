@@ -7,16 +7,15 @@
             <div class="col-md-8 mx-auto">
                 <div class="customer">
                     <h2>検索条件</h2>
-                    enctype="multipart/form-data">
                     <div class="form-group row">
-                        <form action="/customer_search" method="POST">
+                        <form action="{{ action('CustomerSearchController@search')}}" method="POST">
                             @csrf
                             <table>
                                 <tr>
                                     <td>氏名</td>
                                     <td>
                                         <input type="text" name="name"
-                                               value="{{isset($validated['name'])?$validated['name']:''}}"/>
+                                            value="{{isset($validated['name'])?$validated['name']:''}}"/>
                                     </td>
                                 </tr>
                                 <tr>

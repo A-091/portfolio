@@ -6,7 +6,7 @@
         <div class="row">
             <div class="col-md-8 mx-auto">
                 <h2>顧客マスタ 新規登録</h2>
-                <form action="customer" method="POST">
+                <form action="/customers" method="POST">
                     <div class="card">
                         <div class="card-header">顧客新規登録</div>
                         @csrf

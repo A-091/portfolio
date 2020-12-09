@@ -68,7 +68,11 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function () {
         Route::get('home', 'HomeController@index');
     });
 });
-//ニュース記事
+
+//user top
+    Route::get('user/top', 'User\TopController@add');
+
+    //ニュース記事
 Route::group(['prefix' => 'admin'], function () {
     Route::get('news/create', 'Admin\NewsController@add');
     Route::post('news/create', 'Admin\NewsController@create');

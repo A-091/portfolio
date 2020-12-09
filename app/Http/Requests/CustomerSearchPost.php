@@ -24,7 +24,7 @@ class CustomerSearchPost extends FormRequest
     public function rules()
     {
         return [
-            'searchItems' => 'required_without_all:name,age_from,age_to',
+            'searchItems' => 'required_without_all:name',
             'name' => '',
         ];
     }
