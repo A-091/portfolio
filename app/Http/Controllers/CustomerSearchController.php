@@ -22,7 +22,7 @@ class CustomerSearchController extends Controller
      */
     public function index(Request $request)
     {
-        return view('customer_search');
+        return view('admin.customer.customer_search');
     }
 
     public function search(CustomerSearchPost $request, MyApplicationService $myApplicationService)
@@ -37,7 +37,7 @@ class CustomerSearchController extends Controller
             array_push($search_criterias, '氏名が' . $validated['name'] . 'に一致する');
         }
         $customers = Customer::where($wheres)->paginate();
-        return view('customer_search', compact('customers', 'search_criterias', 'validated'));
+        return view('admin.customer.customer_search', compact('customers', 'search_criterias', 'validated'));
 
     }
 

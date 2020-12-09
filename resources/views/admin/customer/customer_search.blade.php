@@ -25,7 +25,6 @@
                                 </tr>
                             </table>
                         </form>
-                        @include('errors')
                     </div>
                 </div>
                 <br/>
